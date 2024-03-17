@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página de Prueba</title>
+</head>
+<body>
+  <div id="ele1"> DIFICIL DE DECIFRAR </div>
+  <script>
+    function pintar(color){
+      ele.style.backgroundColor = color;
+    }
+    const ele = document.getElementById("ele1");
+    ele.style.backgroundColor = 'green'; // color por defecto
+    ele.addEventListener("click", function() { pintar('yellow'); }); // al hacer clic cambia a amarillo
+  </script>
+</body>
+</html>

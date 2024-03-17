@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4 Colores</title>
+</head>
+<body>
+    <div id="blue" style="width: 200px; height: 200px; background-color: blue; margin-bottom: 50px;"></div>
+    <div id="red" style="width: 200px; height: 200px; background-color: red; margin-bottom: 50px;"></div>
+    <div id="green" style="width: 200px; height: 200px; background-color: green; margin-bottom: 50px;"></div>
+    <div id="yellow" style="width: 200px; height: 200px; background-color: yellow; margin-bottom: 50px;"></div>
+    <div id="key" style="width: 200px; height: 200px; background-color: white; border: 1px solid black;"></div>
+    <script>
+        var color;
+        var divs = document.querySelectorAll('div');
+        divs.forEach(function(div) {
+            div.addEventListener('click', function() {
+                this.style.backgroundColor = 'black';
+            });
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'a') {
+                color = 'pink';
+                document.getElementById('key').style.backgroundColor = color;
+            } else if (event.key === 's') {
+                color = 'orange';
+                document.getElementById('key').style.backgroundColor = color;
+            } else if (event.key === 'd') {
+                color = 'skyblue';
+                document.getElementById('key').style.backgroundColor = color;
+            } else if (event.key === 'q') {
+                var newDiv = document.createElement('div');
+                newDiv.style.width = '200px';
+                newDiv.style.height = '200px';
+                newDiv.style.backgroundColor = 'purple';
+                document.body.appendChild(newDiv);
+            } else if (event.key === 'w') {
+                var newDiv = document.createElement('div');
+                newDiv.style.width = '200px';
+                newDiv.style.height = '200px';
+                newDiv.style.backgroundColor = 'gray';
+                document.body.appendChild(newDiv);
+            } else if (event.key === 'e') {
+                var newDiv = document.createElement('div');
+                newDiv.style.width = '200px';
+                newDiv.style.height = '200px';
+                newDiv.style.backgroundColor = 'brown';
+                document.body.appendChild(newDiv);
+            }
+        });
+    </script>
+</body>
+</html>
+
